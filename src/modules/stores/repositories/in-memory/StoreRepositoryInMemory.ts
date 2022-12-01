@@ -29,7 +29,11 @@ export class StoreRepositoreInMemory implements IStoreRepository {
     return store;
   }
 
-  getAll(): Promise<Store[]> {
-    throw new Error('Method not implemented.');
+  async getAll(): Promise<Store[]> {
+    const listStore: Store[];
+
+    this.stores.push(listStore);
+
+    return listStore;
   }
 }
