@@ -6,7 +6,9 @@ import { useForm } from 'react-hook-form';
 import * as zod from 'zod';
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { api } from '../../service/api';
+import { toast } from 'react-toastify';
 
 const FormValidationSignupSchema = zod.object({
   name: zod.string(),
@@ -18,6 +20,7 @@ const FormValidationSignupSchema = zod.object({
 type SchemaFields = zod.infer<typeof FormValidationSignupSchema>
 
 export const SignUp = () => {
+  const navigate = useNavigate();
   const FormValidation = useForm<SchemaFields>({
     resolver: zodResolver(FormValidationSignupSchema)
   });
@@ -25,9 +28,22 @@ export const SignUp = () => {
   const { handleSubmit, register, reset } = FormValidation;
 
   async function handleSignup(data: SchemaFields) {
-    console.log(data);
+    try {
+      const { name, email, password } = data;
 
-    reset();
+      await api.post('/users', {
+        name, email, password
+      });
+
+      reset();
+
+      toast.success('Usuario Cadastro realizado com sucesso');
+
+      navigate('/');
+
+    } catch (error) {
+      toast.error('Ocorreu um erro ao cadastrar, por favor, tente mais tarde');
+    }
   }
 
   return (

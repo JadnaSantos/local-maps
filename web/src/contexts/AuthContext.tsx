@@ -54,7 +54,6 @@ export const AuthProvider = ({ children }: AuthContextProviderProps) => {
     } catch (error) {
       toast.error('Erro ao acessar');
     }
-
   }, []);
 
 

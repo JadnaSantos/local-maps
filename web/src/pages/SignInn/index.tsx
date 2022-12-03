@@ -4,11 +4,12 @@ import { Envelope, Lock, SignIn } from 'phosphor-react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import * as zod from 'zod';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
 import { useContext, useRef, useState } from 'react';
 import { AuthContext } from '../../contexts/AuthContext';
+import { toast } from 'react-toastify';
 
 const FormValidationSchema = zod.object({
   email: zod.string().email(),
@@ -18,6 +19,7 @@ const FormValidationSchema = zod.object({
 type SchemaFields = zod.infer<typeof FormValidationSchema>
 
 export const SignInn = () => {
+  const navigate = useNavigate();
   const { user, singIn } = useContext(AuthContext);
   const [loading, setLoading] = useState(false);
 
@@ -30,17 +32,22 @@ export const SignInn = () => {
   const { handleSubmit, register, reset } = FormValidation;
 
   async function handleLogin(data: SchemaFields) {
-    const { email, password } = data;
+    try {
+      const { email, password } = data;
 
-    setLoading(true);
+      setLoading(true);
 
-    await singIn({
-      email, password
-    });
+      await singIn({
+        email, password
+      });
 
-    setLoading(false);
-
-    reset();
+      reset();
+      navigate('/dashboard');
+    } catch (err) {
+      toast.error('Erro insperado, por favor, tente mais tarde');
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (

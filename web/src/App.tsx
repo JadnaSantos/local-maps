@@ -1,16 +1,19 @@
+import { ToastContainer } from 'react-toastify';
 import { ThemeProvider } from 'styled-components';
 import { AuthProvider } from './contexts/AuthContext';
-import { Router } from './Routes/Routes';
 import { GlobalStyle } from './styles/global';
 import { defaultTheme } from './styles/theme/defauld';
+import 'react-toastify/dist/ReactToastify.min.css';
+import { AppRouter } from './Routes';
 
 export function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <AuthProvider>
-        <Router />
+        <AppRouter />
       </AuthProvider >
       <GlobalStyle />
+      <ToastContainer />
     </ThemeProvider>
   );
 }

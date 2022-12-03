@@ -1,12 +1,20 @@
-import { useContext } from 'react';
-import { AuthContext } from '../contexts/AuthContext';
-import { RouteProps as ReactDOMRouteProps } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { SignInn } from '../pages/SignInn';
+import { SignUp } from '../pages/SingUp';
+import { Dashboard } from '../pages/Dashboard';
+import { PrivateRouter } from './privateRouter';
 
-interface RoutesProps extends ReactRouteProps {
-  isPrivate?: boolean;
-}
+export const AppRouter = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<SignInn />} />
+        <Route path="/sing-up" element={<SignUp />} />
 
-export const Route = ({ isPrivate = false }) => {
-  const { user } = useContext(AuthContext);
-
+        <Route path="/dashboard" element={<PrivateRouter />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Route>
+      </Routes>
+    </Router>
+  );
 };
