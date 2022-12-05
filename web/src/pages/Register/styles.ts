@@ -1,10 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { MapContainer as MapContainerLeaflet } from 'react-leaflet';
-
-interface CategorieContainer {
-  isActive: boolean;
-}
-
 
 export const Container = styled.div`
   display: flex;
@@ -42,6 +37,12 @@ export const Content = styled.div`
   }
 `;
 
+
+
+export const MapContainer = styled(MapContainerLeaflet)`
+  height: 50vh;
+`;
+
 export const ButtonContainer = styled.div`
   text-align: center;
   padding-top: 20px;
@@ -60,26 +61,3 @@ export const Button = styled.button`
   }
 `;
 
-
-export const MapContainer = styled(MapContainerLeaflet)`
-  height: 50vh;
-`;
-
-export const CategoryContainer = styled.div<CategorieContainer>`
-
-  background-color: ${(props) =>
-    props.isActive ? props.theme.colors.white : props.theme.colors.background};
-
-  border: ${(props) =>
-    props.isActive ? `2px solid ${props.theme.colors.background}` : 'none'};
-
-  border-radius: 8px;
-  width: 160px;
-  height: 160px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-  cursor: pointer;
-`;

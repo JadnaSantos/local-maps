@@ -30,4 +30,17 @@ export const GlobalStyle = createGlobalStyle`
   button {
     cursor: pointer
   }
+
+  ::-webkit-scrollbar {
+    width: 0.6rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: ${({ theme }) => theme.colors.input};
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.colors.input};
+    border-radius: 1rem;
+  }
 `;
