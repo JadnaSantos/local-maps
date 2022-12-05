@@ -1,6 +1,6 @@
 import { Container, Content } from './styles';
 import logo from '../../assets/logo.svg';
-import { Envelope, Lock, SignIn } from 'phosphor-react';
+import { Envelope, Lock, SignIn as Login } from 'phosphor-react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import * as zod from 'zod';
@@ -18,7 +18,7 @@ const FormValidationSchema = zod.object({
 
 type SchemaFields = zod.infer<typeof FormValidationSchema>
 
-export const SignInn = () => {
+export const SignIn = () => {
   const navigate = useNavigate();
   const { user, singIn } = useContext(AuthContext);
   const [loading, setLoading] = useState(false);
@@ -86,7 +86,7 @@ export const SignInn = () => {
         </form>
 
         <Link to='/sing-up'>
-          <SignIn size={12} />
+          <Login size={12} />
           Criar Conta
         </Link>
       </Content>
