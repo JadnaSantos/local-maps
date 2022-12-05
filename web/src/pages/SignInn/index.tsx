@@ -42,7 +42,7 @@ export const SignInn = () => {
       });
 
       reset();
-      navigate('/dashboard');
+      navigate('/home');
     } catch (err) {
       toast.error('Erro insperado, por favor, tente mais tarde');
     } finally {
