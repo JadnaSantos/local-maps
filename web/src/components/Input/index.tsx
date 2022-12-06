@@ -1,4 +1,4 @@
-import React, { useState, useCallback, InputHTMLAttributes, useRef } from 'react';
+import React, { useState, useCallback, InputHTMLAttributes, useRef, ChangeEventHandler } from 'react';
 import { Container } from './styles';
 import { IconProps } from 'phosphor-react';
 
@@ -7,6 +7,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   value?: string;
   type?: string;
   icon?: React.ComponentType<IconProps>;
+  onChange?: ChangeEventHandler | undefined;
 }
 
 export const Input = React.forwardRef<HTMLInputElement, InputProps>(({ type, value, onChange, icon: Icon, ...rest }, ref) => {
@@ -40,6 +41,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(({ type, val
         {...rest}
         type={type}
         value={value}
+        onChange={onChange}
       />
     </Container>
   );

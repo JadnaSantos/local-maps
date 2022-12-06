@@ -20,7 +20,6 @@ export const Header = () => {
         <img src={logo} alt="logo" />
 
         <button onClick={singOut}>
-          Sair
           <SignOut
             color='#322153'
             size={24}
