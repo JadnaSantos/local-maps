@@ -1,6 +1,6 @@
 import { Container, Content } from './styles';
 import logo from '../../assets/logo.svg';
-import { SignOut } from 'phosphor-react';
+import { Scroll, SignOut } from 'phosphor-react';
 import { useNavigate } from 'react-router-dom';
 
 import { AuthContext } from '../../contexts/AuthContext';

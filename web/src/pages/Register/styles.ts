@@ -54,6 +54,7 @@ export const Button = styled.button`
   height: 50px;
   border: none;
   border-radius: 5px;
+  width: 60px;
 
 
   &:hover {

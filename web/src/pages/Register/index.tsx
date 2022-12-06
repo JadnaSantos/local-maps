@@ -10,6 +10,7 @@ import { useForm } from 'react-hook-form';
 import * as zod from 'zod';
 import { api } from '../../service/api';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const FormValidationRegisterSchema = zod.object({
   name: zod.string(),
@@ -46,7 +47,7 @@ export const Register = () => {
       navigate('/home');
 
     } catch (error) {
-      console.error(error);
+      toast.error('Ocorreu um erro, por favor tente mais tarde');
     }
   }
 
@@ -63,24 +64,28 @@ export const Register = () => {
           <Input
             placeholder='Nome do Local'
             type='text'
+            required
             {...register('name')}
           />
 
           <Input
             placeholder='Descrição'
             type='text'
+            required
             {...register('description')}
           />
 
           <Input
             placeholder='Contato'
             type='number'
+            required
             {...register('contact')}
           />
 
           <Input
             placeholder='Categoria'
             type='text'
+            required
             {...register('category')}
           />
 

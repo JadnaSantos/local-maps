@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1669936408823" clover="3.2.0">
-  <project timestamp="1669936408824" name="All files">
-    <metrics statements="445" coveredstatements="291" conditionals="13" coveredconditionals="11" methods="22" coveredmethods="6" elements="480" coveredelements="308" complexity="0" loc="445" ncloc="445" packages="14" files="22" classes="22"/>
+<coverage generated="1670341949437" clover="3.2.0">
+  <project timestamp="1670341949437" name="All files">
+    <metrics statements="477" coveredstatements="367" conditionals="30" coveredconditionals="29" methods="26" coveredmethods="14" elements="533" coveredelements="410" complexity="0" loc="477" ncloc="477" packages="15" files="23" classes="23"/>
     <package name="database">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="index.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\src\database\index.ts">
+      <file name="index.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\backend\src\database\index.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -13,7 +13,7 @@
     </package>
     <package name="middleware">
       <metrics statements="31" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="ensureAuthenticateUser.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\src\middleware\ensureAuthenticateUser.ts">
+      <file name="ensureAuthenticateUser.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\backend\src\middleware\ensureAuthenticateUser.ts">
         <metrics statements="31" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -49,9 +49,9 @@
       </file>
     </package>
     <package name="modules.stores.repositories.prisma">
-      <metrics statements="38" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-      <file name="StoreRepository.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\src\modules\stores\repositories\prisma\StoreRepository.ts">
-        <metrics statements="38" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <metrics statements="36" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="StoreRepository.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\backend\src\modules\stores\repositories\prisma\StoreRepository.ts">
+        <metrics statements="36" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -72,9 +72,9 @@
         <line num="18" count="0" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
         <line num="22" count="1" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
         <line num="24" count="0" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
         <line num="26" count="0" type="stmt"/>
@@ -87,14 +87,12 @@
         <line num="33" count="0" type="stmt"/>
         <line num="34" count="0" type="stmt"/>
         <line num="35" count="0" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="38" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
       </file>
     </package>
     <package name="modules.stores.routes">
-      <metrics statements="32" coveredstatements="32" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="listStore.routes.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\src\modules\stores\routes\listStore.routes.ts">
+      <metrics statements="31" coveredstatements="31" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="listStore.routes.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\backend\src\modules\stores\routes\listStore.routes.ts">
         <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -106,8 +104,8 @@
         <line num="8" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
       </file>
-      <file name="store.routes.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\src\modules\stores\routes\store.routes.ts">
-        <metrics statements="23" coveredstatements="23" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="store.routes.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\backend\src\modules\stores\routes\store.routes.ts">
+        <metrics statements="22" coveredstatements="22" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -130,12 +128,11 @@
         <line num="20" count="1" type="stmt"/>
         <line num="21" count="1" type="stmt"/>
         <line num="22" count="1" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
       </file>
     </package>
     <package name="modules.stores.useCases.listStore">
       <metrics statements="26" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-      <file name="ListStoreController.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\src\modules\stores\useCases\listStore\ListStoreController.ts">
+      <file name="ListStoreController.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\backend\src\modules\stores\useCases\listStore\ListStoreController.ts">
         <metrics statements="13" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -151,7 +148,7 @@
         <line num="12" count="0" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
       </file>
-      <file name="ListStoreUseCase.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\src\modules\stores\useCases\listStore\ListStoreUseCase.ts">
+      <file name="ListStoreUseCase.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\backend\src\modules\stores\useCases\listStore\ListStoreUseCase.ts">
         <metrics statements="13" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -169,9 +166,9 @@
       </file>
     </package>
     <package name="modules.stores.useCases.store">
-      <metrics statements="44" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-      <file name="CreateStoreController.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\src\modules\stores\useCases\store\CreateStoreController.ts">
-        <metrics statements="22" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="42" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="CreateStoreController.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\backend\src\modules\stores\useCases\store\CreateStoreController.ts">
+        <metrics statements="21" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -192,11 +189,10 @@
         <line num="18" count="0" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
       </file>
-      <file name="CreateStoreUseCase.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\src\modules\stores\useCases\store\CreateStoreUseCase.ts">
-        <metrics statements="22" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="CreateStoreUseCase.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\backend\src\modules\stores\useCases\store\CreateStoreUseCase.ts">
+        <metrics statements="21" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -217,13 +213,55 @@
         <line num="18" count="0" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="modules.user.repositories.inmemory">
+      <metrics statements="37" coveredstatements="37" conditionals="8" coveredconditionals="8" methods="4" coveredmethods="4"/>
+      <file name="UserRepositoryInMemory.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\backend\src\modules\user\repositories\inmemory\UserRepositoryInMemory.ts">
+        <metrics statements="37" coveredstatements="37" conditionals="8" coveredconditionals="8" methods="4" coveredmethods="4"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="8" type="cond" truecount="1" falsecount="0"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="8" count="8" type="cond" truecount="1" falsecount="0"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="13" count="6" type="stmt"/>
+        <line num="14" count="6" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="16" count="6" type="stmt"/>
+        <line num="17" count="6" type="stmt"/>
+        <line num="18" count="6" type="stmt"/>
+        <line num="19" count="6" type="stmt"/>
+        <line num="20" count="6" type="stmt"/>
+        <line num="21" count="6" type="stmt"/>
+        <line num="22" count="6" type="stmt"/>
+        <line num="23" count="6" type="stmt"/>
+        <line num="24" count="6" type="stmt"/>
+        <line num="25" count="6" type="stmt"/>
+        <line num="26" count="6" type="stmt"/>
+        <line num="27" count="6" type="stmt"/>
+        <line num="28" count="6" type="stmt"/>
+        <line num="29" count="8" type="stmt"/>
+        <line num="30" count="8" type="cond" truecount="1" falsecount="0"/>
+        <line num="31" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="32" count="10" type="stmt"/>
+        <line num="33" count="8" type="stmt"/>
+        <line num="34" count="8" type="cond" truecount="1" falsecount="0"/>
+        <line num="35" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="37" count="8" type="stmt"/>
       </file>
     </package>
     <package name="modules.user.repositories.prisma">
       <metrics statements="27" coveredstatements="23" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="2"/>
-      <file name="UsersRepository.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\src\modules\user\repositories\prisma\UsersRepository.ts">
+      <file name="UsersRepository.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\backend\src\modules\user\repositories\prisma\UsersRepository.ts">
         <metrics statements="27" coveredstatements="23" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -256,7 +294,7 @@
     </package>
     <package name="modules.user.routes">
       <metrics statements="46" coveredstatements="46" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="session.routes.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\src\modules\user\routes\session.routes.ts">
+      <file name="session.routes.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\backend\src\modules\user\routes\session.routes.ts">
         <metrics statements="18" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -277,7 +315,7 @@
         <line num="17" count="1" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
       </file>
-      <file name="user.routes.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\src\modules\user\routes\user.routes.ts">
+      <file name="user.routes.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\backend\src\modules\user\routes\user.routes.ts">
         <metrics statements="20" coveredstatements="20" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -300,7 +338,7 @@
         <line num="19" count="1" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
       </file>
-      <file name="userProfile.routes.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\src\modules\user\routes\userProfile.routes.ts">
+      <file name="userProfile.routes.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\backend\src\modules\user\routes\userProfile.routes.ts">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -313,8 +351,8 @@
       </file>
     </package>
     <package name="modules.user.useCases.authenticateUser">
-      <metrics statements="54" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-      <file name="AuthenticateUserController.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\src\modules\user\useCases\authenticateUser\AuthenticateUserController.ts">
+      <metrics statements="54" coveredstatements="46" conditionals="5" coveredconditionals="5" methods="3" coveredmethods="2"/>
+      <file name="AuthenticateUserController.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\backend\src\modules\user\useCases\authenticateUser\AuthenticateUserController.ts">
         <metrics statements="15" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -332,8 +370,8 @@
         <line num="14" count="0" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
       </file>
-      <file name="AuthenticateUserUseCase.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\src\modules\user\useCases\authenticateUser\AuthenticateUserUseCase.ts">
-        <metrics statements="39" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="AuthenticateUserUseCase.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\backend\src\modules\user\useCases\authenticateUser\AuthenticateUserUseCase.ts">
+        <metrics statements="39" coveredstatements="39" conditionals="5" coveredconditionals="5" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -341,43 +379,43 @@
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
+        <line num="8" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
+        <line num="12" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="15" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="21" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
         <line num="39" count="1" type="stmt"/>
       </file>
     </package>
     <package name="modules.user.useCases.user">
-      <metrics statements="50" coveredstatements="48" conditionals="7" coveredconditionals="6" methods="3" coveredmethods="3"/>
-      <file name="CreateUserController.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\src\modules\user\useCases\user\CreateUserController.ts">
+      <metrics statements="50" coveredstatements="50" conditionals="8" coveredconditionals="8" methods="3" coveredmethods="3"/>
+      <file name="CreateUserController.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\backend\src\modules\user\useCases\user\CreateUserController.ts">
         <metrics statements="17" coveredstatements="17" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -397,8 +435,8 @@
         <line num="16" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
       </file>
-      <file name="CreateUserUseCase.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\src\modules\user\useCases\user\CreateUserUseCase.ts">
-        <metrics statements="33" coveredstatements="31" conditionals="5" coveredconditionals="4" methods="2" coveredmethods="2"/>
+      <file name="CreateUserUseCase.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\backend\src\modules\user\useCases\user\CreateUserUseCase.ts">
+        <metrics statements="33" coveredstatements="33" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -406,37 +444,37 @@
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="8" count="3" type="stmt"/>
-        <line num="9" count="3" type="stmt"/>
+        <line num="8" count="11" type="stmt"/>
+        <line num="9" count="11" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
         <line num="11" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="12" count="3" type="stmt"/>
-        <line num="13" count="3" type="cond" truecount="0" falsecount="1"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="16" count="3" type="stmt"/>
-        <line num="17" count="3" type="stmt"/>
-        <line num="18" count="3" type="stmt"/>
-        <line num="19" count="3" type="cond" truecount="1" falsecount="0"/>
-        <line num="20" count="2" type="stmt"/>
-        <line num="21" count="2" type="stmt"/>
-        <line num="22" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="24" count="1" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
-        <line num="28" count="1" type="stmt"/>
-        <line num="29" count="1" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
-        <line num="31" count="1" type="stmt"/>
-        <line num="32" count="1" type="stmt"/>
+        <line num="12" count="11" type="stmt"/>
+        <line num="13" count="11" type="cond" truecount="1" falsecount="0"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="10" type="cond" truecount="1" falsecount="0"/>
+        <line num="17" count="10" type="stmt"/>
+        <line num="18" count="10" type="stmt"/>
+        <line num="19" count="11" type="cond" truecount="1" falsecount="0"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="22" count="7" type="cond" truecount="1" falsecount="0"/>
+        <line num="23" count="7" type="stmt"/>
+        <line num="24" count="7" type="stmt"/>
+        <line num="25" count="7" type="stmt"/>
+        <line num="26" count="7" type="stmt"/>
+        <line num="27" count="7" type="stmt"/>
+        <line num="28" count="7" type="stmt"/>
+        <line num="29" count="7" type="stmt"/>
+        <line num="30" count="7" type="stmt"/>
+        <line num="31" count="7" type="stmt"/>
+        <line num="32" count="7" type="stmt"/>
         <line num="33" count="1" type="stmt"/>
       </file>
     </package>
     <package name="modules.user.useCases.userProfile">
-      <metrics statements="34" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-      <file name="UserProfileController.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\src\modules\user\useCases\userProfile\UserProfileController.ts">
+      <metrics statements="34" coveredstatements="25" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="2"/>
+      <file name="UserProfileController.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\backend\src\modules\user\useCases\userProfile\UserProfileController.ts">
         <metrics statements="16" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -455,32 +493,8 @@
         <line num="15" count="0" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
       </file>
-      <file name="UserProfileUseCase.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\src\modules\user\useCases\userProfile\UserProfileUseCase.ts">
-        <metrics statements="18" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="shared.errors">
-      <metrics statements="11" coveredstatements="11" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-      <file name="AppError.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\src\shared\errors\AppError.ts">
-        <metrics statements="11" coveredstatements="11" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="UserProfileUseCase.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\backend\src\modules\user\useCases\userProfile\UserProfileUseCase.ts">
+        <metrics statements="18" coveredstatements="18" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -488,7 +502,31 @@
         <line num="5" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="6" count="2" type="stmt"/>
         <line num="7" count="2" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="shared.errors">
+      <metrics statements="11" coveredstatements="11" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="AppError.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\backend\src\shared\errors\AppError.ts">
+        <metrics statements="11" coveredstatements="11" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="6" count="12" type="stmt"/>
+        <line num="7" count="12" type="stmt"/>
+        <line num="8" count="12" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
@@ -496,7 +534,7 @@
     </package>
     <package name="shared.http">
       <metrics statements="34" coveredstatements="28" conditionals="3" coveredconditionals="2" methods="0" coveredmethods="0"/>
-      <file name="server.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\src\shared\http\server.ts">
+      <file name="server.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\backend\src\shared\http\server.ts">
         <metrics statements="34" coveredstatements="28" conditionals="3" coveredconditionals="2" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -536,7 +574,7 @@
     </package>
     <package name="shared.http.routes">
       <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="routes.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\src\shared\http\routes\routes.ts">
+      <file name="routes.ts" path="C:\Users\Jadna Silva\Documents\sistema-local-maps\backend\src\shared\http\routes\routes.ts">
         <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
