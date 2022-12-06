@@ -11,8 +11,7 @@ export class StoreRepositoreInMemory implements IStoreRepository {
     description,
     category,
     contact,
-    latitude,
-    longitude,
+    adress
   }: IStoreDTO): Promise<Store> {
     const store: Store = {
       id: String(id),
@@ -20,8 +19,7 @@ export class StoreRepositoreInMemory implements IStoreRepository {
       description,
       category,
       contact,
-      latitude,
-      longitude,
+      adress
     };
 
     this.stores.push(store);

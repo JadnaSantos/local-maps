@@ -5,15 +5,14 @@ import { IStoreRepository } from '../interfaces/IStoreRepository';
 
 
 export class StoreRepository implements IStoreRepository {
-  public async create({ name, description, category, contact, latitude, longitude }: IStoreDTO): Promise<Store> {
+  public async create({ name, description, category, contact, adress }: IStoreDTO): Promise<Store> {
     const store = await prisma.store.create({
       data: {
         name,
         description,
         category,
         contact,
-        latitude,
-        longitude
+        adress
       }
     });
 
@@ -28,8 +27,7 @@ export class StoreRepository implements IStoreRepository {
         description: true,
         category: true,
         contact: true,
-        latitude: true,
-        longitude: true
+        adress: true
       }
     });
 

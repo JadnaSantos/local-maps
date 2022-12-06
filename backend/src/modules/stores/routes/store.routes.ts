@@ -14,8 +14,7 @@ storeRoutes.post(
       description: Joi.string().required(),
       category: Joi.string().required(),
       contact: Joi.string().required(),
-      latitude: Joi.number().required(),
-      longitude: Joi.number().required(),
+      adress: Joi.string().required(),
     },
   }),
 
