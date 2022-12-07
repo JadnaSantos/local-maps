@@ -24,15 +24,14 @@ import { useNavigation } from '@react-navigation/native'
 const FormValidationSignupSchema = zod.object({
   name: zod.string(),
   email: zod.string().email(),
-  password: zod.string().min(3, { message: "Must be 5 or more characters long" })
+  password: zod.string().min(8)
 })
 
 type SchemaFields = zod.infer<typeof FormValidationSignupSchema>
 
 export function SignUp() {
-
+  const { singUp } = useContext(AuthContext)
   const navigation = useNavigation()
-  const [isLoading, setIsLoading] = useState(false)
 
 
   const FormValidation = useForm<SchemaFields>({
@@ -42,7 +41,21 @@ export function SignUp() {
   const { handleSubmit, reset, control, formState: { errors } } = FormValidation
 
   async function onSubmit(data: SchemaFields) {
-    reset()
+    try {
+      const { name, email, password } = data
+
+      await singUp({
+        name, email, password
+      })
+
+      reset()
+
+      navigation.goBack()
+
+    } catch (error) {
+      const isAppError = error instanceof AppError;
+      const title = isAppError ? error.message : 'Não foi possível entrar. Tente novamente mais tarde.'
+    }
   }
 
 
@@ -85,6 +98,9 @@ export function SignUp() {
                   <Input
                     placeholder="E-mail"
                     icon="mail"
+                    autoCorrect={false}
+                    autoCapitalize='none'
+                    keyboardType='email-address'
                     value={value}
                     onChangeText={onChange}
                   />

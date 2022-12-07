@@ -16,12 +16,20 @@ type SignInProps = {
   password: string;
 }
 
+type SingUpProps = {
+  name: string;
+  email: string;
+  password: string
+}
+
 type AuthContextData = {
   user: UserDTO;
   isAuthenticated: boolean;
   signIn: (credential: SignInProps) => Promise<void>
   loadingAuth: boolean;
   signOut: () => Promise<void>
+  singUp: (credential: SingUpProps) => Promise<void>
+  loading: boolean
 }
 
 type AuthProviderProps = {
@@ -32,8 +40,8 @@ export const AuthContext = createContext({} as AuthContextData);
 
 export function AuthProvider({ children }: AuthProviderProps) {
   const [loadingAuth, setLoadingAuth] = useState(true)
-
   const [user, setUser] = useState<UserDTO>({} as UserDTO)
+  const [loading, setLoading] = useState(true)
 
 
   const isAuthenticated = !!user.name;
@@ -64,16 +72,25 @@ export function AuthProvider({ children }: AuthProviderProps) {
         email, password
       })
 
-
       if (data.user && data.token) {
         await storageUserAndTokenSave(data.user, data.token)
         userAndTokenUpdate(data.user, data.token)
       }
-
+      // setLoading(false)
     } catch (error) {
       throw error
     } finally {
       setLoadingAuth(false);
+    }
+  }
+
+  async function singUp({ name, email, password }: SingUpProps) {
+    try {
+      await api.post('/users', {
+        name, email, password
+      })
+    } catch (error) {
+      throw error
     }
   }
 
@@ -118,7 +135,9 @@ export function AuthProvider({ children }: AuthProviderProps) {
       isAuthenticated,
       signIn,
       loadingAuth,
-      signOut
+      signOut,
+      singUp,
+      loading
     }}>
 
       {children}

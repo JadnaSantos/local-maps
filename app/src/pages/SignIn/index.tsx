@@ -34,8 +34,8 @@ export function SignIn() {
   const navigation = useNavigation()
 
   const { signIn, loadingAuth } = useContext(AuthContext)
-  const [isLoading, setIsLoading] = useState(false)
 
+  console.log(loadingAuth)
 
   const FormValidation = useForm<SchemaFields>({
     resolver: zodResolver(FormValidationSignupSchema)
@@ -45,7 +45,6 @@ export function SignIn() {
 
   async function onSubmit(data: SchemaFields) {
     try {
-      setIsLoading(true);
       const { email, password } = data
       console.log(data)
 
@@ -59,8 +58,6 @@ export function SignIn() {
       console.error(error)
       const isAppError = error instanceof AppError;
       const title = isAppError ? error.message : 'Não foi possível entrar. Tente novamente mais tarde.'
-    } finally {
-      setIsLoading(false);
     }
   }
 
@@ -90,7 +87,11 @@ export function SignIn() {
                 render={({ field: { value, onChange } }) => (
                   <Input
                     placeholder="E-mail"
+                    autoCorrect={false}
+                    autoCapitalize='none'
+                    keyboardType='email-address'
                     icon="mail"
+                    returnKeyType='next'
                     value={value}
                     onChangeText={onChange}
                   />
