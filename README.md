@@ -8,16 +8,20 @@ o projeto  é constituído por uma plataforma web que as pessoas possam cadastra
 ### Layout 🦚
 
 ### Web
-<img alt="Local Maps" title="Local Maps" src="./media/cadastrar-local-maps.png" width="600px">
-<img alt="Local Maps" title="Local Maps" src="./media/home-local.maps.png" width="600px">
-<img alt="Local Maps" title="Local Maps" src="./media/login-local-maps.png" width="600px">
+<p aling="center">
+  <img alt="Local Maps" title="Local Maps" src="./media/cadastrar-local-maps.png" width="600px">
+  <img alt="Local Maps" title="Local Maps" src="./media/home-local.maps.png" width="600px">
+  <img alt="Local Maps" title="Local Maps" src="./media/login-local-maps.png" width="600px">
+</p>
 
 
 ### Mobile 
+<p aling="center">
+  <img alt="Local Maps" title="Local Maps" src="./media/image_123986672 (3).JPG" width="200px">
+  <img alt="Local Maps" title="Local Maps" src="./media/image_6487327 (1).JPG" width="200px">
+  <img alt="Local Maps" title="Local Maps" src="./media/image_6487327 (2).JPG" width="200px">
+</p>
 
-<img alt="Local Maps" title="Local Maps" src="./media/cadastrar-local-maps.png" width="600px">
-<img alt="Local Maps" title="Local Maps" src="./media/home-local.maps.png" width="600px">
-<img alt="Local Maps" title="Local Maps" src="./media/login-local-maps.png" width="600px">
 
 
 
