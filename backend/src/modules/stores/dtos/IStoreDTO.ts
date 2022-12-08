@@ -4,5 +4,6 @@ export interface IStoreDTO {
   description: string,
   category: string,
   contact: string,
-  adress: string,
+  latitude: number,
+  longitude: number,
 }

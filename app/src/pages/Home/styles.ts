@@ -30,10 +30,10 @@ export const CategoriesContainer = styled.View`
 `;
 
 export const CategoriesItem = styled.TouchableOpacity`
-  height: 50%;
-  width: 50%;
+  height: 110px;
+  width: 100px;
 
-  background-color: ${({ theme }) => theme.colors.background} ;
+  background-color: ${({ theme }) => theme.colors.toast} ;
 
   justify-content: center;
   align-items: center;
@@ -42,8 +42,8 @@ export const CategoriesItem = styled.TouchableOpacity`
 `;
 
 export const CategoriesImage = styled.Image`
-  width: 50%;
-  height: 50%;
+  width: 50px;
+  height: 50px;
 `;
 
 export const CategoriesText = styled.Text`

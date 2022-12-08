@@ -4,7 +4,7 @@ import { CreateStoreUseCase } from './CreateStoreUseCase';
 
 export class CreateStoreController {
   async handle(request: Request, response: Response) {
-    const { name, description, category, contact, adress } = request.body;
+    const { name, description, category, contact, longitude, latitude } = request.body;
 
     const createStore = new CreateStoreUseCase(new StoreRepository());
 
@@ -13,7 +13,9 @@ export class CreateStoreController {
       description,
       category,
       contact,
-      adress
+      longitude,
+      latitude
+
     });
 
     return response.json(store);

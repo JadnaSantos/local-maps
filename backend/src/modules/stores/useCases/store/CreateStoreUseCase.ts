@@ -6,14 +6,15 @@ export class CreateStoreUseCase {
     private storeRepository: IStoreRepository
   ) { }
 
-  public async execute({ name, description, category, contact, adress }: IStoreDTO) {
+  public async execute({ name, description, category, contact, latitude, longitude }: IStoreDTO) {
 
     const store = await this.storeRepository.create({
       name,
       description,
       category,
       contact,
-      adress
+      latitude,
+      longitude
     });
 
     return store;

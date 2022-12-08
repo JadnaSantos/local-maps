@@ -27,7 +27,8 @@ model Store {
   description String
   category    String
   contact     String
-  adress      String
+  latitude    Int
+  longitude   Int
 
   @@map("store")
 }

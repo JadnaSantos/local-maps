@@ -41,29 +41,25 @@ export function Home() {
 
           </Marker>
         </MapView>
-        <Button title="Sair" onPress={signOut} />
 
-
+        <CategoriesContainer>
+          <FlatList
+            data={categories}
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            ItemSeparatorComponent={() => <View style={{ width: 10 }} />}
+            contentContainerStyle={{
+              alignItems: 'center',
+            }}
+            renderItem={({ item }) => (
+              <CategoriesItem key={item.key}>
+                <CategoriesImage source={item.image} />
+                <CategoriesText>{item.label}</CategoriesText>
+              </CategoriesItem>
+            )}
+          />
+        </CategoriesContainer>
       </Container>
-
-      <CategoriesContainer>
-        <FlatList
-          data={categories}
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          ItemSeparatorComponent={() => <View style={{ width: 10 }} />}
-          contentContainerStyle={{
-            alignItems: 'center',
-          }}
-          renderItem={({ item }) => {
-            <CategoriesItem key={item.key}>
-              <CategoriesImage source={item.image} />
-              <CategoriesText>{item.label}</CategoriesText>
-            </CategoriesItem>
-          }}
-        />
-
-      </CategoriesContainer>
     </>
 
   )

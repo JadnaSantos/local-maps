@@ -4,13 +4,14 @@ import { IconProps } from 'phosphor-react';
 
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+  label?: string;
   value?: string;
   type?: string;
   icon?: React.ComponentType<IconProps>;
   onChange?: ChangeEventHandler | undefined;
 }
 
-export const Input = React.forwardRef<HTMLInputElement, InputProps>(({ type, value, onChange, icon: Icon, ...rest }, ref) => {
+export const Input = React.forwardRef<HTMLInputElement, InputProps>(({ label, type, value, onChange, icon: Icon, ...rest }, ref) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const [isFocused, setIsFocused] = useState(false);
@@ -40,6 +41,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(({ type, val
         ref={ref}
         {...rest}
         type={type}
+        label={label}
         value={value}
         onChange={onChange}
       />
