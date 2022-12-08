@@ -1,6 +1,6 @@
 ## Local-maps 🌎
 
-### Sobre
+### Sobre ✨
 
 Local Maps é um app que ajuda as pessoas a conhecer melhor o comércio local, ou seja,
 o projeto  é constituído por uma plataforma web que as pessoas possam cadastrar os estabelecimentos.
@@ -11,6 +11,7 @@ o projeto  é constituído por uma plataforma web que as pessoas possam cadastra
 
 -  [Node.js](https://nodejs.org/en/)
 -  [Express](https://expressjs.com/)
+-  [Typescript](https://www.typescriptlang.org/)
 -  [Prisma - ORM](https://www.prisma.io/)
 -  [Bcrypt](https://www.npmjs.com/package/bcrypt)
 -  [JWT](https://jwt.io/)
@@ -25,9 +26,19 @@ o projeto  é constituído por uma plataforma web que as pessoas possam cadastra
 #### Front-End 
 
 - [React.js](https://reactjs.org/docs/getting-started)
+- [Typescript](https://www.typescriptlang.org/)
 - [Styled Components](https://styled-components.com/)
 - [Zod](https://zod.dev/)
 - [React-use-form](https://react-hook-form.com/api/Useform/)
+
+#### Mobile
+
+-  [Typescript](https://www.typescriptlang.org/)
+-  [React.js](https://reactjs.org/docs/getting-started)
+-  [React-Native](https://reactnative.dev)
+-  [Styled Components](https://styled-components.com/)
+-  [Zod](https://zod.dev/)
+-  [React-use-form](https://react-hook-form.com/api/Useform/)
 
 <details open>
   <summary><h3>Arquitetura </h3></summary>
@@ -48,8 +59,8 @@ em modulos e funções deve ter uma responsabilidade.
 - [x] Logar um usuário;
 - [x] Verificar autenticação para rotas privadas;
 - [x] Mostar detalhes do usuário;
-- [x] Criar e listar categoria;
-
+- [x] Cadastrar um estabelecimento;
+- [x] Listar um estabelecimento;
 
 ## ✅ Requisitos Back end
 
@@ -76,7 +87,7 @@ $ npx prisma migrate dev --name init
 # Inicialize o servidor em modo desenvolvimento
 $ yarn run dev
 
-# O servidor irá iniciar em http://localhost:3333
+# O servidor irá iniciar em http://localhost:3001
 ```
 
 ## ✅ Requisitos Front-end
