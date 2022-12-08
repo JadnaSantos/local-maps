@@ -5,11 +5,16 @@
 Local Maps é um app que ajuda as pessoas a conhecer melhor o comércio local, ou seja,
 o projeto  é constituído por uma plataforma web que as pessoas possam cadastrar os estabelecimentos.
 
-### Layout
+### Layout 🦚
+
+### Web
+<img alt="Local Maps" title="Local Maps" src="./media/cadastrar-local-maps.png" width="600px">
+<img alt="Local Maps" title="Local Maps" src="./media/home-local.maps.png" width="600px">
+<img alt="Local Maps" title="Local Maps" src="./media/login-local-maps.png" width="600px">
 
 
+### Mobile 
 
-## Mobile 
 <img alt="Local Maps" title="Local Maps" src="./media/cadastrar-local-maps.png" width="600px">
 <img alt="Local Maps" title="Local Maps" src="./media/home-local.maps.png" width="600px">
 <img alt="Local Maps" title="Local Maps" src="./media/login-local-maps.png" width="600px">
