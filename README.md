@@ -1,5 +1,7 @@
 ## Local-maps 🌎
 
+### In Progress
+
 ### Sobre ✨
 
 Local Maps é um app que ajuda as pessoas a conhecer melhor o comércio local, ou seja,
