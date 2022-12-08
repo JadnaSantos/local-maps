@@ -59,6 +59,9 @@ export function Home() {
             )}
           />
         </CategoriesContainer>
+
+
+        <Button title='sair' onPress={signOut} />
       </Container>
     </>
 
