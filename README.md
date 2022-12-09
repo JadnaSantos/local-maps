@@ -11,19 +11,19 @@ o projeto  é constituído por uma plataforma web que as pessoas possam cadastra
 
 ### Web
 <p aling="center">
-  <img alt="Local Maps" title="Local Maps" src="./media/web-login.png" width="600px">
-  <img alt="Local Maps" title="Local Maps" src="./media/cadastrar-users.png" width="600px">
-  <img alt="Local Maps" title="Local Maps" src="./media/home-local.maps.png" width="600px">
-  <img alt="Local Maps" title="Local Maps" src="./media/Cadastrar-um-comercio-no-map.png" width="600px">
+  <img alt="Local Maps" title="Local Maps" src="./media/web-login.png" width="400px">
+  <img alt="Local Maps" title="Local Maps" src="./media/cadastrar-users.png" width="400px">
+  <img alt="Local Maps" title="Local Maps" src="./media/home-local.maps.png" width="400px">
+  <img alt="Local Maps" title="Local Maps" src="./media/Cadastrar-um-comercio-no-map.png" width="400px">
 
 </p>
 
 
 ### Mobile 
 <p aling="center">
-  <img alt="Local Maps" title="Local Maps" src="./media/image_123986672 (3).JPG" width="200px">
-  <img alt="Local Maps" title="Local Maps" src="./media/image_6487327 (1).JPG" width="200px">
-  <img alt="Local Maps" title="Local Maps" src="./media/image_6487327 (2).JPG" width="200px">
+  <img alt="Local Maps" title="Local Maps" src="./media/mobile-login.jpg" width="200px">
+  <img alt="Local Maps" title="Local Maps" src="./media/mobile-cadastrar-use.jpg" width="200px">
+  <img alt="Local Maps" title="Local Maps" src="./media/cadastrar-store.jpg" width="200px">
 </p>
 
 
