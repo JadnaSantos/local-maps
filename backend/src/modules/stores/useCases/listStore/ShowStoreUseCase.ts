@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import { AppError } from '../../../../shared/errors/AppError';
 import { IStoreRepository, StoreTest } from '../../repositories/interfaces/IStoreRepository';
 

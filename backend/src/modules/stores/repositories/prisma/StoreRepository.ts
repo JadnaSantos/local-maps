@@ -41,6 +41,15 @@ export class StoreRepository implements IStoreRepository {
       where: {
         id,
       },
+      select: {
+        id: true,
+        name: true,
+        description: true,
+        category: true,
+        contact: true,
+        latitude: true,
+        longitude: true,
+      }
     });
 
     return store;

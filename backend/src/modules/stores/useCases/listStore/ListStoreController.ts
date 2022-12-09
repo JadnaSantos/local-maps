@@ -17,7 +17,9 @@ export class ListStoreController {
 
     const show = new ShowStoreUseCase(new StoreRepository());
 
-    const showStore = show.execute({ id });
+    const showStore = await show.execute({ id });
+
+    console.log('store', showStore);
 
     return response.json(showStore);
   }

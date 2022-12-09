@@ -13,7 +13,7 @@ interface StoreProps {
   longitude: number;
 }
 
-interface StoreParams {
+type StoreParams = {
   id: string;
 }
 
@@ -25,7 +25,7 @@ export const DetailsStore = () => {
 
   async function getDetailsStore() {
     try {
-      const response = await api.get(`/store${params.id}`);
+      const response = await api.get(`/store/${params.id}`);
       console.log(response.data);
 
     } catch (error) {
