@@ -43,4 +43,5 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${({ theme }) => theme.colors.input};
     border-radius: 1rem;
   }
+
 `;

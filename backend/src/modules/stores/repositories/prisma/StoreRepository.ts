@@ -1,7 +1,7 @@
 import { Store } from '@prisma/client';
 import { prisma } from '../../../../database';
 import { IStoreDTO } from '../../dtos/IStoreDTO';
-import { IStoreRepository } from '../interfaces/IStoreRepository';
+import { IStoreRepository, StoreTest } from '../interfaces/IStoreRepository';
 
 
 export class StoreRepository implements IStoreRepository {
@@ -31,6 +31,16 @@ export class StoreRepository implements IStoreRepository {
         latitude: true,
         longitude: true,
       }
+    });
+
+    return store;
+  }
+
+  public async getById({ id }: StoreTest): Promise<Store | null> {
+    const store = await prisma.store.findUnique({
+      where: {
+        id,
+      },
     });
 
     return store;

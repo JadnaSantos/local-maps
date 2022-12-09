@@ -10,4 +10,5 @@ export class CreateStoreUseCase {
 
     return store;
   }
+
 }

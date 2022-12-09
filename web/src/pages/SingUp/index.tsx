@@ -13,7 +13,7 @@ import { toast } from 'react-toastify';
 const FormValidationSignupSchema = zod.object({
   name: zod.string(),
   email: zod.string().email(),
-  password: zod.string().min(8, 'Password must contain at most 8 character(s)')
+  password: zod.string().min(8, { message: 'A sua senha deve ter no mínimo 8 caracters' })
 
 });
 
@@ -25,7 +25,7 @@ export const SignUp = () => {
     resolver: zodResolver(FormValidationSignupSchema)
   });
 
-  const { handleSubmit, register, reset } = FormValidation;
+  const { handleSubmit, register, reset, formState: { errors } } = FormValidation;
 
   async function handleSignup(data: SchemaFields) {
     try {
@@ -42,7 +42,7 @@ export const SignUp = () => {
       navigate('/');
 
     } catch (error) {
-      toast.error('Ocorreu um erro ao cadastrar, por favor, tente mais tarde');
+      toast.error('E-mail já está cadastrado no sistema');
     }
   }
 
@@ -56,21 +56,25 @@ export const SignUp = () => {
 
           <Input
             icon={User}
-            placeholder='Nome'
+            placeholder='Nome Completo'
             required
             {...register('name')}
           />
           <Input
             icon={Envelope}
             placeholder='E-mail'
+            type='email'
             required
             {...register('email')}
           />
           <Input
             icon={Lock}
+            required
+            type='password'
             placeholder='Senha'
             {...register('password')}
           />
+          {errors.password?.message && <span>{errors.password?.message}</span>}
 
           <Button
             type='submit'

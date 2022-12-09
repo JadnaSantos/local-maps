@@ -65,12 +65,17 @@ export const Button = styled.button`
   background-color:  ${({ theme }) => theme.colors.primary};
   color:  ${({ theme }) => theme.colors.white};
   height: 50px;
+  width: 48%;
   border: none;
 
   margin-top: 1rem;
   border-radius: 5px;
   position: relative;
   padding-left: 50px;
+
+  @media (max-width: 976px) {
+    width: 98%;
+  }
 
 `;
 

@@ -55,7 +55,7 @@ export const AuthProvider = ({ children }: AuthContextProviderProps) => {
       toast.success('Logado com sucess');
     } catch (error) {
       console.log(error);
-      toast.error('Erro ao acessar');
+      toast.error('Erro ao acessar, usuario ou senha incorreta');
     }
   }, []);
 

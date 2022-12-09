@@ -13,14 +13,14 @@ import { toast } from 'react-toastify';
 
 const FormValidationSchema = zod.object({
   email: zod.string().email(),
-  password: zod.string().min(8, 'Password must contain at least 8 character(s)')
+  password: zod.string().min(8, { message: 'A sua deve ter no mínimo 8 caracters' })
 });
 
 type SchemaFields = zod.infer<typeof FormValidationSchema>
 
 export const SignIn = () => {
   const navigate = useNavigate();
-  const { user, singIn } = useContext(AuthContext);
+  const { singIn } = useContext(AuthContext);
   const [loading, setLoading] = useState(false);
 
   const inputRef = useRef<HTMLInputElement>(null);
@@ -29,7 +29,7 @@ export const SignIn = () => {
     resolver: zodResolver(FormValidationSchema)
   });
 
-  const { handleSubmit, register, reset } = FormValidation;
+  const { handleSubmit, register, reset, formState: { errors, isSubmitted } } = FormValidation;
 
   async function handleLogin(data: SchemaFields) {
     try {
@@ -67,6 +67,7 @@ export const SignIn = () => {
             {...inputRef}
           />
 
+
           <Input
             icon={Lock}
             type='password'
@@ -74,6 +75,7 @@ export const SignIn = () => {
             {...register('password')}
             {...inputRef}
           />
+          {errors.password?.message && <p>{errors.password?.message}</p>}
 
           <Button
             type='submit'

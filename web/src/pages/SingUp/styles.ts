@@ -87,11 +87,14 @@ export const Content = styled.div`
     }
   }
 
+  span {
+    color: ${({ theme }) => theme.colors.error_color};
+  }
+
   @media (max-width: 620px) {
     width: 90%;
   }
 
 `;
 
-export const Background = styled.div`
-`;
+
