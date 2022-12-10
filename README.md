@@ -24,7 +24,6 @@ o projeto  é constituído por uma plataforma web que as pessoas possam cadastra
 <p aling="center">
   <img alt="Local Maps" title="Local Maps" src="./media/mobile-login.jpg" width="200px">
   <img alt="Local Maps" title="Local Maps" src="./media/mobile-cadastrar-use.jpg" width="200px">
-  <img alt="Local Maps" title="Local Maps" src="./media/MAPS (2).jpg" width="200px">
 </p
 
 
