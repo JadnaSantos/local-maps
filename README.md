@@ -78,7 +78,7 @@ em modulos e funções deve ter uma responsabilidade.
 ### Features In Progress
 - [ ] Implemetar Testes unitários e integração Back-end; 🚧
 - [ ] Implemetar Teste no Front-end; 🚧
-- [ ] Fizalizar mobile; 🚧
+
 
 ### 📃 Regras de Négocio
 
