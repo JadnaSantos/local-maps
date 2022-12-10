@@ -33,9 +33,8 @@ type SchemaFields = zod.infer<typeof FormValidationSignupSchema>
 export function SignIn() {
   const navigation = useNavigation()
 
-  const { signIn, loadingAuth } = useContext(AuthContext)
+  const { signIn } = useContext(AuthContext)
 
-  console.log(loadingAuth)
 
   const FormValidation = useForm<SchemaFields>({
     resolver: zodResolver(FormValidationSignupSchema)
@@ -46,7 +45,6 @@ export function SignIn() {
   async function onSubmit(data: SchemaFields) {
     try {
       const { email, password } = data
-      console.log(data)
 
       await signIn({
         email, password

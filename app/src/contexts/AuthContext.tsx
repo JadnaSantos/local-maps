@@ -4,13 +4,6 @@ import { UserDTO } from "../dtos/UserDTO";
 import { storageUserGet, storageUserRemove, storageUserSave } from "../storage/storageUser";
 import { storageAuthTokenGet, storageAuthTokenRemove, storageAuthTokenSave } from "../storage/storageAuthToken";
 
-// type UserProps = {
-//   id: string;
-//   name: string;
-//   email: string;
-//   token: string;
-// }
-
 type SignInProps = {
   email: string;
   password: string;
@@ -76,7 +69,6 @@ export function AuthProvider({ children }: AuthProviderProps) {
         await storageUserAndTokenSave(data.user, data.token)
         userAndTokenUpdate(data.user, data.token)
       }
-      // setLoading(false)
     } catch (error) {
       throw error
     } finally {

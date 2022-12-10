@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 import {
   CategoriesContainer,
@@ -11,8 +11,10 @@ import {
   Title
 } from "./styles";
 import MapView, { Marker } from "react-native-maps";
-import { Button, FlatList, View } from "react-native";
+import { Button, FlatList, View, ActivityIndicator } from "react-native";
 import { categories } from "./categories";
+import { api } from "../../services/api";
+import { useNavigation } from "@react-navigation/native";
 
 export interface IMarker {
   category: string;
@@ -26,6 +28,28 @@ export interface IMarker {
 
 export function Home() {
   const { signOut } = useContext(AuthContext)
+
+  const [markers, setMarkes] = useState<IMarker[]>([])
+  const [filter, setFilter] = useState('')
+  const navigation = useNavigation()
+
+  const filterData = markers.filter((marker) => marker.category === filter)
+
+  async function loadData() {
+    try {
+      const response = await api.get('/store')
+
+      setMarkes(response.data)
+
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
+  useEffect(() => {
+    loadData()
+  }, [])
+
   return (
     <>
       <Container>
@@ -34,12 +58,37 @@ export function Home() {
           <SubTitle>Encontre no mapa um ponto do comércio local</SubTitle>
         </Content>
 
-        <MapView style={{ flex: 1 }}>
-          <Marker
-            coordinate={{ latitude: 0, longitude: 0 }}
-          >
-
-          </Marker>
+        <MapView
+          style={{ flex: 1 }}
+          initialRegion={{
+            latitude: markers[0].latitude,
+            longitude: markers[0].longitude,
+            latitudeDelta: 0.0922,
+            longitudeDelta: 0.0421
+          }}
+        >
+          {(filter ? filterData : markers).map((item) => {
+            return (
+              <Marker
+                key={item.id}
+                coordinate={{
+                  latitude: item.latitude,
+                  longitude: item.longitude
+                }}
+                onPress={() => {
+                  navigation.navigate('details', {
+                    id: item.id,
+                    name: item.name,
+                    description: item.description,
+                    category: item.category,
+                    contact: item.contact,
+                    latitude: item.latitude,
+                    longitude: item.longitude
+                  })
+                }}
+              />
+            )
+          })}
         </MapView>
 
         <CategoriesContainer>
@@ -52,7 +101,12 @@ export function Home() {
               alignItems: 'center',
             }}
             renderItem={({ item }) => (
-              <CategoriesItem key={item.key}>
+              <CategoriesItem
+                onPress={() => {
+                  setFilter(filter === item.key ? "" : item.key)
+                }}
+                key={item.key}
+              >
                 <CategoriesImage source={item.image} />
                 <CategoriesText>{item.label}</CategoriesText>
               </CategoriesItem>
@@ -61,7 +115,7 @@ export function Home() {
         </CategoriesContainer>
 
 
-        <Button title='sair' onPress={signOut} />
+        <Button title='Sair' onPress={signOut} />
       </Container>
     </>
 

@@ -17,7 +17,7 @@ export function AppRoutes() {
       <Screen
         name="details"
         component={Details}
-        options={{ headerShown: false }}
+      // options={{ headerShown: false }}
       />
     </Navigator>
   )
