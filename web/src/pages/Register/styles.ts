@@ -15,26 +15,26 @@ export const Content = styled.div`
   margin-top: 40px;
   border-radius: 8px;
 
-
-  h1 {
-    color: ${({ theme }) => theme.colors.primary};
-    font-size: 2rem;
-    padding-bottom: 30px;
-    font-weight: 700;
-  }
-
-  span {
-    color: ${({ theme }) => theme.colors.primary};
-    font-size: 1rem;
-
-    padding-bottom: 30px;
-    padding-top: 30px;
-    font-weight: 700;
-  }
-
   @media (max-width: 1024px) {
     width: 70vw;
   }
+`;
+
+export const FormTitle = styled.h2`
+  color: ${(props) => props.theme.colors.primary};
+  display: flex;
+  justify-content: center;
+
+  font-size: 20px;
+  padding-bottom: 30px;
+`;
+
+export const Section = styled.p`
+  color: ${(props) => props.theme.colors.primary};
+  font-size: 20px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  font-weight: 700;
 `;
 
 export const MapContainer = styled(MapContainerLeaflet)`
@@ -93,6 +93,26 @@ export const Form = styled.form`
   padding: 50px;
   margin-top: 40px;
   border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+
+
+  input {
+    border: none;
+    background-color: ${(props) => props.theme.colors.background};
+    color: ${(props) => props.theme.colors.text};
+
+    border-radius: 8px;
+    height: 28px;
+    font-size: 15px;
+    padding: 10px;
+
+    margin-bottom: 4px;
+  }
+
+
   @media (max-width: 1024px) {
     width: 70vw;
   }

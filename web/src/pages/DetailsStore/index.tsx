@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { api } from '../../service/api';
+import { Container, Content, ContentDetails } from './styles';
 
 interface StoreProps {
   id: string;
@@ -26,7 +27,7 @@ export const DetailsStore = () => {
   async function getDetailsStore() {
     try {
       const response = await api.get(`/store/${params.id}`);
-      console.log(response.data);
+      setStore(response.data);
 
     } catch (error) {
       toast.error('Erro insperado, por favor, tente mais tarde');
@@ -38,6 +39,21 @@ export const DetailsStore = () => {
   }, [params.id]);
 
   return (
-    <h1>This is details</h1>
+    <Container>
+      <Content>
+        <ContentDetails>
+          <h2>{store?.name}</h2>
+
+          <span>{store?.description}</span>
+
+          <span><strong>Contato:</strong> {store?.contact}</span>
+
+          <footer>
+            <a target="_blank" rel="noopener noreferrer" href={`https://www.google.com/maps/dir/?api=1&destination=${store?.latitude},${store?.longitude}`}>Ver rotas no Google Map</a>
+          </footer>
+
+        </ContentDetails>
+      </Content>
+    </Container>
   );
 };

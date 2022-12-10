@@ -10,7 +10,7 @@ export const Home = () => {
         <h1>O mapa local de sua cidade</h1>
         <span>Encontre no comércio local tudo o que precisa!</span>
 
-        <Link to='/store-map'>
+        <Link to='/register'>
           <Button>
             <ButtonBox>
               <ArrowRight size={24} />

@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 import { api } from '../../service/api';
 import { toast } from 'react-toastify';
 
-interface StoreProps {
+export interface StoreProps {
   id: string;
   name: string;
   description: string;

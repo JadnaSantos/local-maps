@@ -1,31 +1,51 @@
-import { Container, Content } from './styles';
+import {
+  Container,
+  Content,
+  HeaderItem,
+  HeaderItems
+} from './styles';
 import logo from '../../assets/logo.svg';
-import { Scroll, SignOut } from 'phosphor-react';
+import { SignOut } from 'phosphor-react';
 import { useNavigate } from 'react-router-dom';
 
 import { AuthContext } from '../../contexts/AuthContext';
 import { useContext } from 'react';
 
 export const Header = () => {
-  const { singOut } = useContext(AuthContext);
   const navigate = useNavigate();
+  const { singOut } = useContext(AuthContext);
 
   function handleLogoClick() {
     navigate('/home');
+  }
+
+  function handleExploreStoreClick() {
+    navigate('/explorer-map');
+  }
+
+  function handleDetailsStoreClick() {
+    navigate('/register');
   }
 
   return (
     <Container>
       <Content onClick={handleLogoClick} title="Home">
         <img src={logo} alt="logo" />
+      </Content>
 
-        <button onClick={singOut}>
+      <HeaderItems>
+        <HeaderItem onClick={handleExploreStoreClick}>Explorar</HeaderItem>
+        <HeaderItem onClick={handleDetailsStoreClick}>Cadastrar</HeaderItem>
+
+        <HeaderItem onClick={singOut}>
           <SignOut
             color='#322153'
             size={24}
           />
-        </button>
-      </Content>
+        </HeaderItem>
+
+      </HeaderItems>
+
     </Container>
   );
 };

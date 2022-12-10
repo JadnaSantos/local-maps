@@ -17,7 +17,7 @@ export const AppRouter = () => {
         <Route path="/" element={<DefaultLayout />}>
 
           <Route path="/home" element={<PrivateRouter><Home /></PrivateRouter>}></Route>
-          <Route path="/store-map" element={<PrivateRouter><StoresMap /></PrivateRouter>}></Route>
+          <Route path="/explorer-map" element={<PrivateRouter><StoresMap /></PrivateRouter>}></Route>
           <Route path="/register" element={<PrivateRouter><Register /></PrivateRouter>}></Route>
           <Route path="store/:id" element={<PrivateRouter><DetailsStore /></PrivateRouter>}></Route>
 
