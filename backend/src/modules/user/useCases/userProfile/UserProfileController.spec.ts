@@ -1,17 +1,21 @@
 /* eslint-disable indent */
 import request from 'supertest';
 import { app } from '../../../../shared/http/server';
+import jwt from 'jsonwebtoken';
+import { AppError } from '../../../../shared/errors/AppError';
 
-const TOKEN = '123456789';
 
 describe('Profille Controller', () => {
-    it.skip('should be able to show profile user', async () => {
-        const response = await request(app)
+    it('It should not verify the access token and respond with status 401', async () => {
+        const jwtSpy = jest.spyOn(jwt, 'verify');
+        jwtSpy.mockImplementationOnce(() => { throw new AppError('Token invalid'); });
+
+        const res = await request(app)
             .get('/profile')
-            .set('authorization', `Bearer ${TOKEN}`);
+            .set('access-token', 'somerandomjwttoken')
+            .send({});
 
+        expect(res.status).toEqual(400);
 
-        console.log(response);
-        expect(response.status).toBe(200);
     });
 });
