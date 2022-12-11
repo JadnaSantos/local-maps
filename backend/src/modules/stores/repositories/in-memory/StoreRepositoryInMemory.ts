@@ -1,6 +1,6 @@
 import { Store } from '@prisma/client';
 import { IStoreDTO } from '../../dtos/IStoreDTO';
-import { IStoreRepository } from '../interfaces/IStoreRepository';
+import { IStoreRepository, StoreTest } from '../interfaces/IStoreRepository';
 
 export class StoreRepositoreInMemory implements IStoreRepository {
   stores: Store[] = [];
@@ -11,7 +11,8 @@ export class StoreRepositoreInMemory implements IStoreRepository {
     description,
     category,
     contact,
-    adress
+    latitude,
+    longitude
   }: IStoreDTO): Promise<Store> {
     const store: Store = {
       id: String(id),
@@ -19,7 +20,8 @@ export class StoreRepositoreInMemory implements IStoreRepository {
       description,
       category,
       contact,
-      adress
+      latitude,
+      longitude
     };
 
     this.stores.push(store);
@@ -28,10 +30,15 @@ export class StoreRepositoreInMemory implements IStoreRepository {
   }
 
   async getAll(): Promise<Store[]> {
-    const listStore: Store[];
+    const store = this.stores;
 
-    this.stores.push(listStore);
-
-    return listStore;
+    return store;
   }
+
+  async getById({ id }: StoreTest): Promise<Store | null> {
+    return this.stores.find(store => store.id === id) || null;
+  }
+
+
+
 }

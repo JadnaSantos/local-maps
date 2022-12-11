@@ -1,6 +1,6 @@
 import { IStoreRepository } from '../../repositories/interfaces/IStoreRepository';
 
-export class CreateStoreUseCase {
+export class ListStoreUseCase {
   constructor(
     private storeRepository: IStoreRepository
   ) { }

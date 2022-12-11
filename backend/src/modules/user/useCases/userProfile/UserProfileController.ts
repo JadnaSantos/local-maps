@@ -10,7 +10,6 @@ export class UserProfileController {
 
     const user = await showUser.execute(id);
 
-
     return response.json(user);
   }
 }
