@@ -29,7 +29,7 @@ export const SignIn = () => {
     resolver: zodResolver(FormValidationSchema)
   });
 
-  const { handleSubmit, register, reset, formState: { errors, isSubmitted } } = FormValidation;
+  const { handleSubmit, register, reset, formState: { errors } } = FormValidation;
 
   async function handleLogin(data: SchemaFields) {
     try {

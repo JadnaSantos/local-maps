@@ -8,7 +8,8 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   value?: string;
   type?: string;
   icon?: React.ComponentType<IconProps>;
-  onChange?: ChangeEventHandler | undefined;
+  // eslint-disable-next-line @typescript-eslint/ban-types
+  onChange?: Function
 }
 
 export const Input = React.forwardRef<HTMLInputElement, InputProps>(({ label, type, value, onChange, icon: Icon, ...rest }, ref) => {

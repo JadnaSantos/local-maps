@@ -5,45 +5,56 @@ import {
   Container, Form, FormTitle, MapContainer, Section,
 } from './styles';
 import { useNavigate } from 'react-router-dom';
-import { FormEvent, useState } from 'react';
+import { useState } from 'react';
 import { api } from '../../service/api';
 import { mapIcon } from '../../utils/MapIcon';
+import { Input } from '../../components/Input';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import * as zod from 'zod';
+import { toast } from 'react-toastify';
+
+const FormValidationSchema = zod.object({
+  name: zod.string(),
+  description: zod.string(),
+  contact: zod.string(),
+  category: zod.string(),
+});
+
+type SchemaFields = zod.infer<typeof FormValidationSchema>
 
 
 export const Register = () => {
   const navigate = useNavigate();
 
-  const [name, setName] = useState('');
-  const [description, setDescription] = useState('');
-  const [contact, setContact] = useState('');
+  const FormValidation = useForm<SchemaFields>({
+    resolver: zodResolver(FormValidationSchema)
+  });
+
   const [position, setPosition] = useState({ latitude: 0, longitude: 0 });
-  const [category, setCategory] = useState('');
+
+  const { handleSubmit, register, reset } = FormValidation;
 
 
-  async function handleSubmit(event: FormEvent) {
+  async function onSubmit(data: SchemaFields) {
     try {
-      event.preventDefault();
+
+      const { name, description, contact, category } = data;
 
       const { latitude, longitude } = position;
-      console.log(position);
 
-      const data = new FormData();
+      await api.post('/store', {
+        name, description, contact, category, latitude, longitude
+      });
 
+      reset();
 
-      data.append('name', name);
-      data.append('description', description);
-      data.append('category', category);
-      data.append('contact', contact);
-      data.append('latitude', String(latitude));
-      data.append('longitude', String(longitude));
-
-      await api.post('/store', data);
-      console.log(data);
+      toast.success('Cadastro realizado com sucesso');
 
       navigate('/home');
 
     } catch (error) {
-      console.log(error);
+      toast.error('Não foi possivel cadastrar, por favor, tente mais tarde ');
     }
   }
 
@@ -70,34 +81,32 @@ export const Register = () => {
   }
 
 
-
-
   return (
     <Container>
-      <Form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit(onSubmit)}>
         <FormTitle>Cadastro do Comércio Local</FormTitle>
 
         <Section>Dados</Section>
 
-        <input
+        <Input
           placeholder='Nome'
           type='text'
-          value={name}
-          onChange={event => setName(event.target.value)}
+          required
+          {...register('name')}
         />
 
-        <input
+        <Input
           placeholder='Descrição'
           type='text'
-          value={description}
-          onChange={event => setDescription(event.target.value)}
+          required
+          {...register('description')}
         />
 
-        <input
+        <Input
           placeholder='Contato'
           type='number'
-          value={contact}
-          onChange={event => setContact(event.target.value)}
+          required
+          {...register('contact')}
         />
 
         <Section>Endereço</Section>
@@ -119,11 +128,11 @@ export const Register = () => {
 
         <Section>Categoria</Section>
 
-        <input
+        <Input
           placeholder='Categoria'
           type='text'
-          value={category}
-          onChange={event => setCategory(event.target.value)}
+          required
+          {...register('category')}
         />
 
         <ButtonContainer>
