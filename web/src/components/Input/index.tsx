@@ -1,18 +1,15 @@
-import React, { useState, useCallback, InputHTMLAttributes, useRef, ChangeEventHandler } from 'react';
+import React, { useState, useCallback, InputHTMLAttributes, useRef } from 'react';
 import { Container } from './styles';
 import { IconProps } from 'phosphor-react';
 
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  label?: string;
   value?: string;
   type?: string;
   icon?: React.ComponentType<IconProps>;
-  // eslint-disable-next-line @typescript-eslint/ban-types
-  onChange?: Function
 }
 
-export const Input = React.forwardRef<HTMLInputElement, InputProps>(({ label, type, value, onChange, icon: Icon, ...rest }, ref) => {
+export const Input = React.forwardRef<HTMLInputElement, InputProps>(({ type, value, onChange, icon: Icon, ...rest }, ref) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const [isFocused, setIsFocused] = useState(false);
@@ -42,7 +39,6 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(({ label, ty
         ref={ref}
         {...rest}
         type={type}
-        label={label}
         value={value}
         onChange={onChange}
       />
