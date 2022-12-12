@@ -129,12 +129,12 @@ $ cd front-end
 $ code .
 
 # Instale as dependências
-$ yarn dev
+$ npm i
 
 # Após isso você precisa gerar as tables no DB.
 
 # Inicialize o servidor em modo desenvolvimento
-$ yarn run dev
+$ npm run dev
 
 # O servidor irá iniciar em http://localhost:3333
 ```
