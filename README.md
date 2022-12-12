@@ -136,3 +136,26 @@ $ npm run dev
 
 # O servidor irá iniciar em http://localhost:3333
 ```
+
+## ✅ Requisitos Mobile
+
+Para executar o projeto você precisa instalar as depedência citadas a cima 
+
+```bash
+# Entre na pasta front end
+$ cd app
+
+# Execute o comando e o projeto sera aberto no Visual Studio Code
+$ code .
+
+# Instale as dependências
+$ npm i
+
+# Após isso você precisa gerar as tables no DB.
+
+# Inicialize o servidor em modo desenvolvimento
+$ expo start
+
+```
+
+Feito com 💖 por Jadna Silva
