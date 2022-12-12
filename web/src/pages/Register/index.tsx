@@ -59,7 +59,7 @@ export const Register = () => {
   }
 
   function AddMarkerToClick() {
-    const map = useMapEvents({
+    useMapEvents({
       click(event) {
         const { lat, lng } = event.latlng;
         setPosition({
