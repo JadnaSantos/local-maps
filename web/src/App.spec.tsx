@@ -1,4 +1,5 @@
-/* eslint-disable indent */
+import { test } from '@jest/globals';
+
 test('App', () => {
-    expect(1 + 1).toBe(2);
+  expect(1 + 1).toBe(2);
 });

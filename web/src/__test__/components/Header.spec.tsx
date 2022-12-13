@@ -1,7 +1,8 @@
 /* eslint-disable indent */
-import { Header } from '.';
+import React from 'react';
+import { Header } from '../../components/Header';
 import { render, screen } from '@testing-library/react';
-
+import { describe } from '@jest/globals';
 
 const mockedUsedNavigate = jest.fn();
 
@@ -14,6 +15,7 @@ describe('Header', () => {
     it('should render component correctly', () => {
         render(<Header />);
 
-        expect(screen.getByText('Qualquer coiss')).toBeInTheDocument();
+        expect(screen.getByText('Explorar')).toBeInTheDocument();
+        expect(screen.getByText('Cadastrar')).toBeInTheDocument();
     });
 });

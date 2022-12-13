@@ -38,11 +38,11 @@ export const Content = styled.div`
 
     h4 {
       margin-bottom: 24px;
-      color: ${({ theme }) => theme.colors.text};
+      color: ${({ theme }) => theme.colors?.text};
     }
 
     > a {
-      color: ${({ theme }) => theme.colors.text};
+      color: ${({ theme }) => theme.colors?.text};
       display: block;
       margin-top: 24px;
       text-decoration: none;
@@ -55,7 +55,7 @@ export const Content = styled.div`
   }
 
   > a {
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors?.text};
     margin-top: 5px;
     text-decoration: none;
     transition: background-color 0.2s;

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Container, Content } from './styles';
 import logo from '../../assets/logo.svg';
 import { Envelope, Lock, SignIn as Login } from 'phosphor-react';

@@ -6,7 +6,7 @@ export const Container = styled.header`
   top: 0;
   width: 100%;
 
-  background-color: ${({ theme }) => theme.colors.background};
+  background-color: ${({ theme }) => theme.colors?.background};
   border-bottom: 1px solid hsla(0, 0%, 98%, 0.1);
   z-index: 999;
 
