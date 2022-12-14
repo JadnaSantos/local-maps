@@ -54,7 +54,7 @@ o projeto  é constituído por uma plataforma web que as pessoas possam cadastra
 - [Typescript](https://www.typescriptlang.org/)
 - [Styled Components](https://styled-components.com/)
 - [Zod](https://zod.dev/)
-- [React-use-form](https://react-hook-form.com/api/Useform/)
+- [React-Hook-Form](https://react-hook-form.com/api/Useform/)
 
 #### Mobile
 
@@ -63,7 +63,7 @@ o projeto  é constituído por uma plataforma web que as pessoas possam cadastra
 -  [React-Native](https://reactnative.dev)
 -  [Styled Components](https://styled-components.com/)
 -  [Zod](https://zod.dev/)
--  [React-use-form](https://react-hook-form.com/api/Useform/)
+-  [React-Hook-Form](https://react-hook-form.com/api/Useform/)
 
 <details open>
   <summary><h3>Arquitetura </h3></summary>
