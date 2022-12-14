@@ -78,7 +78,18 @@ em modulos e funções deve ter uma responsabilidade.
 - [ ] Implemetar Teste no Front-end; 🚧
 
 
-### 📃 Regras de Négocio
+### 📃 Funcionalidades
+
+Versão Web:
+
+- [x] Cadastrar um novo usuário;
+- [x] Logar um usuário;
+- [x] Verificar autenticação para rotas privadas;
+- [x] Mostar detalhes do usuário;
+- [x] Cadastrar um estabelecimento;
+- [x] Listar um estabelecimento;
+
+Versão Mobile:
 
 - [x] Cadastrar um novo usuário;
 - [x] Logar um usuário;
@@ -158,4 +169,4 @@ $ expo start
 
 ```
 
-Feito com 💖 por Jadna Silva
+Feito com 💖 por Jadna Silva contato: https://www.linkedin.com/in/jadna-jesus/
