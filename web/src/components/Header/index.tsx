@@ -8,13 +8,11 @@ import {
 import logo from '../../assets/logo.svg';
 import { SignOut } from 'phosphor-react';
 import { useNavigate } from 'react-router-dom';
-
-import { AuthContext } from '../../contexts/AuthContext';
-import { useContext } from 'react';
+import { useAuth } from '../../hooks/useAuth';
 
 export const Header = () => {
   const navigate = useNavigate();
-  const { singOut } = useContext(AuthContext);
+  const { singOut } = useAuth();
 
   function handleLogoClick() {
     navigate('/home');
@@ -31,7 +29,7 @@ export const Header = () => {
   return (
     <Container>
       <Content onClick={handleLogoClick} title="Home">
-        <img src={logo} alt="logo" />
+        <img data-testid="image" src={logo} alt="logo" />
       </Content>
 
       <HeaderItems>

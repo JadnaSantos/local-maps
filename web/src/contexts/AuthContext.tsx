@@ -1,3 +1,4 @@
+import React from 'react';
 import { createContext, ReactNode, useCallback, useState } from 'react';
 import { api } from '../service/api';
 import { toast } from 'react-toastify';
@@ -13,7 +14,7 @@ interface SingInCredentials {
   password: string;
 }
 
-interface AuthContextData {
+export interface AuthContextData {
   user: object;
   singIn: (credentials: SingInCredentials) => Promise<void>
   singOut(): void
@@ -74,4 +75,6 @@ export const AuthProvider = ({ children }: AuthContextProviderProps) => {
     </AuthContext.Provider>
   );
 };
+
+
 

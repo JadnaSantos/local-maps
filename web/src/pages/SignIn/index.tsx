@@ -8,9 +8,10 @@ import * as zod from 'zod';
 import { Link, useNavigate } from 'react-router-dom';
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
-import { useContext, useRef, useState } from 'react';
-import { AuthContext } from '../../contexts/AuthContext';
+import { useRef, useState } from 'react';
+
 import { toast } from 'react-toastify';
+import { useAuth } from '../../hooks/useAuth';
 
 const FormValidationSchema = zod.object({
   email: zod.string().email(),
@@ -21,7 +22,8 @@ type SchemaFields = zod.infer<typeof FormValidationSchema>
 
 export const SignIn = () => {
   const navigate = useNavigate();
-  const { singIn } = useContext(AuthContext);
+
+  const { singIn } = useAuth();
   const [loading, setLoading] = useState(false);
 
   const inputRef = useRef<HTMLInputElement>(null);

@@ -9,7 +9,7 @@ const config: Config.InitialOptions = {
 
   testEnvironment: 'jsdom',
   moduleNameMapper: {
-    '\\.(scss|css|sass|svg|png|jpg|img)$': 'identity-obj-proxy',
+    '\\.(scss|css|sass|svg|png|jpg|webp|ttf|woff|woff2|svg|mp4)$': 'identity-obj-proxy',
     '^styled-components':
       '<rootDir>/node_modules/styled-components/dist/styled-components.browser.cjs.js'
   },
