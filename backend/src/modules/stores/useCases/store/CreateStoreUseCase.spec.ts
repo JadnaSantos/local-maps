@@ -25,13 +25,7 @@ describe('Create Store', () => {
             longitude: 23,
         });
 
-        expect(store).toHaveProperty('id');
-        expect(store).toHaveProperty('name');
-        expect(store).toHaveProperty('description');
-        expect(store).toHaveProperty('contact');
-        expect(store).toHaveProperty('category');
-        expect(store).toHaveProperty('latitude');
-        expect(store).toHaveProperty('longitude');
+        expect(store).toBeTruthy();
     });
 
 });
