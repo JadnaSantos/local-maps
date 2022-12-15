@@ -37,7 +37,7 @@ export const SignUp = () => {
 
       reset();
 
-      toast.success('Usuario Cadastro realizado com sucesso');
+      toast.success('Cadastrado realizado com sucesso');
 
       navigate('/');
 

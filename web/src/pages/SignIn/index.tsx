@@ -15,7 +15,7 @@ import { useAuth } from '../../hooks/useAuth';
 
 const FormValidationSchema = zod.object({
   email: zod.string().email(),
-  password: zod.string().min(8, { message: 'A sua deve ter no mínimo 8 caracters' })
+  password: zod.string().min(8, { message: 'A sua senha deve ter no mínimo 8 caracters' })
 });
 
 type SchemaFields = zod.infer<typeof FormValidationSchema>

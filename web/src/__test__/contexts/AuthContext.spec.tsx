@@ -5,13 +5,14 @@ import { renderHook } from '@testing-library/react';
 import { AuthProvider } from '../../contexts/AuthContext';
 import { api } from '../../service/api';
 import { useAuth } from '../../hooks/useAuth';
-import { act } from 'react-dom/test-utils';
 
 
 const apiMock = new MockAdapter(api);
 
 
-describe('AuthContext', () => {
+
+
+describe('Auth hook', () => {
     it('should be hable to sign in', async () => {
         const response = {
             user: {
@@ -37,7 +38,6 @@ describe('AuthContext', () => {
         });
 
 
-
         expect(setItemSpy).toHaveBeenCalledWith(
             '@LocalMaps:token',
             response.token,
@@ -48,7 +48,7 @@ describe('AuthContext', () => {
             JSON.stringify(response.user),
         );
 
-        console.log(result);
+        expect(response.user.email).toEqual('user@example.com');
 
     });
 
