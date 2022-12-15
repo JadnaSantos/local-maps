@@ -14,10 +14,7 @@ o projeto  é constituído por uma plataforma web que as pessoas possam cadastra
   <img alt="Local Maps" title="Local Maps" src="./media/home-local.maps.png" width="400px">
   <img alt="Local Maps" title="Local Maps" src="./media/Cadastrar-um-comercio-no-map.png" width="400px">
   <img alt="Local Maps" title="Local Maps" src="./media/web-register.png" width="400px">
-
 </p>
-
-
 
 ### Mobile 
 <p aling="center">
