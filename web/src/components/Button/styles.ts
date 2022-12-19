@@ -3,8 +3,8 @@ import { shade } from 'polished';
 
 export const Container = styled.button`
 
-  background: ${({ theme }) => theme.colors.button};
-  color: ${({ theme }) => theme.colors.black};
+  background: ${({ theme }) => theme.colors?.button};
+  color: ${({ theme }) => theme.colors?.black};
   border-radius: 10px;
   border: 0;
   font-weight: 500;
@@ -21,7 +21,7 @@ export const Container = styled.button`
   }
 
   a {
-    color: ${({ theme }) => theme.colors.white};
+    color: ${({ theme }) => theme.colors?.white};
 
   }
 

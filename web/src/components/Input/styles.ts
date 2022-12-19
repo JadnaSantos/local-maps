@@ -8,9 +8,9 @@ interface ContainerProps {
 export const Container = styled.div<ContainerProps>`
   border-radius: 10px;
 
-  background: ${({ theme }) => theme.colors.background};
-  color: ${({ theme }) => theme.colors.text};
-  border: 2px solid  ${({ theme }) => theme.colors.text};
+  background: ${({ theme }) => theme.colors?.background};
+  color: ${({ theme }) => theme.colors?.text};
+  border: 2px solid  ${({ theme }) => theme.colors?.text};
 
 
   padding: 16px;

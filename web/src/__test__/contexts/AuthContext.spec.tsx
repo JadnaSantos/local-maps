@@ -10,47 +10,45 @@ import { useAuth } from '../../hooks/useAuth';
 const apiMock = new MockAdapter(api);
 
 
-
-
 describe('Auth hook', () => {
-    it('should be hable to sign in', async () => {
-        const response = {
-            user: {
-                id: 'user-123',
-                name: 'User test',
-                email: 'user@example.com',
-            },
-            token: 'token-123',
-        };
+  it('should be hable to sign in', async () => {
+    const response = {
+      user: {
+        id: 'user-123',
+        name: 'User test',
+        email: 'user@example.com',
+      },
+      token: 'token-123',
+    };
 
-        apiMock.onPost('/session').reply(200, response);
+    apiMock.onPost('/session').reply(200, response);
 
-        const setItemSpy = jest.spyOn(Storage.prototype, 'setItem');
+    const setItemSpy = jest.spyOn(Storage.prototype, 'setItem');
 
-        const { result } = renderHook(() => useAuth(), {
-            wrapper: AuthProvider,
-        });
-
-
-        await result.current.singIn({
-            email: 'user@example.com',
-            password: '123456',
-        });
-
-
-        expect(setItemSpy).toHaveBeenCalledWith(
-            '@LocalMaps:token',
-            response.token,
-        );
-
-        expect(setItemSpy).toHaveBeenCalledWith(
-            '@LocalMaps:user',
-            JSON.stringify(response.user),
-        );
-
-        expect(response.user.email).toEqual('user@example.com');
-
+    const { result } = renderHook(() => useAuth(), {
+      wrapper: AuthProvider,
     });
+
+
+    await result.current.singIn({
+      email: 'user@example.com',
+      password: '123456',
+    });
+
+
+    expect(setItemSpy).toHaveBeenCalledWith(
+      '@LocalMaps:token',
+      response.token,
+    );
+
+    expect(setItemSpy).toHaveBeenCalledWith(
+      '@LocalMaps:user',
+      JSON.stringify(response.user),
+    );
+
+    expect(response.user.email).toEqual('user@example.com');
+
+  });
 
 });
 

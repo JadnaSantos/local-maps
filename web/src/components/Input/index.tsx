@@ -31,7 +31,10 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(({ type, val
   }, []);
 
   return (
-    <Container isFilled={isFilled} isFocused={isFocused}>
+    <Container
+      isFilled={isFilled}
+      isFocused={isFocused}
+      data-testid="input">
       {Icon && <Icon size={24} />}
       <input
         onFocus={handleInputFocus}

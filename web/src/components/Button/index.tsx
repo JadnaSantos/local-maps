@@ -1,3 +1,4 @@
+import React from 'react';
 import { Spinner } from 'phosphor-react';
 import { ButtonHTMLAttributes, ReactNode } from 'react';
 import { Container } from './styles';
