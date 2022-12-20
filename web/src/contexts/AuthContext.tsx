@@ -3,7 +3,6 @@ import { createContext, ReactNode, useCallback, useState } from 'react';
 import { api } from '../service/api';
 import { toast } from 'react-toastify';
 
-
 interface AuthState {
   token: string;
   user: object;

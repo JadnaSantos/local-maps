@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
   Container,
   Content,
@@ -8,11 +8,11 @@ import {
 import logo from '../../assets/logo.svg';
 import { SignOut } from 'phosphor-react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../../hooks/useAuth';
+import { AuthContext } from '../../contexts/AuthContext';
 
 export const Header = () => {
   const navigate = useNavigate();
-  const { singOut } = useAuth();
+  const { singOut } = useContext(AuthContext);
 
   function handleLogoClick() {
     navigate('/home');

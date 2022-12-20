@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Container, Content } from './styles';
 import logo from '../../assets/logo.svg';
 import { Envelope, Lock, SignIn as Login } from 'phosphor-react';
@@ -11,7 +11,7 @@ import { Button } from '../../components/Button';
 import { useRef, useState } from 'react';
 
 import { toast } from 'react-toastify';
-import { useAuth } from '../../hooks/useAuth';
+import { AuthContext } from '../../contexts/AuthContext';
 
 const FormValidationSchema = zod.object({
   email: zod.string().email(),
@@ -23,7 +23,7 @@ type SchemaFields = zod.infer<typeof FormValidationSchema>
 export const SignIn = () => {
   const navigate = useNavigate();
 
-  const { singIn } = useAuth();
+  const { singIn } = useContext(AuthContext);
   const [loading, setLoading] = useState(false);
 
   const inputRef = useRef<HTMLInputElement>(null);

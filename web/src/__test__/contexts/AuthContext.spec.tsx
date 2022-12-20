@@ -1,10 +1,9 @@
 /* eslint-disable indent */
-import React from 'react';
+import React, { useContext } from 'react';
 import MockAdapter from 'axios-mock-adapter';
-import { renderHook } from '@testing-library/react';
-import { AuthProvider } from '../../contexts/AuthContext';
+import { renderHook, act } from '@testing-library/react';
 import { api } from '../../service/api';
-import { useAuth } from '../../hooks/useAuth';
+import { AuthContext, AuthProvider } from '../../contexts/AuthContext';
 
 
 const apiMock = new MockAdapter(api);
@@ -25,7 +24,7 @@ describe('Auth hook', () => {
 
     const setItemSpy = jest.spyOn(Storage.prototype, 'setItem');
 
-    const { result } = renderHook(() => useAuth(), {
+    const { result } = renderHook(() => useContext(AuthContext), {
       wrapper: AuthProvider,
     });
 
@@ -48,6 +47,53 @@ describe('Auth hook', () => {
 
     expect(response.user.email).toEqual('user@example.com');
 
+  });
+
+  // it('should be not hable to sign in', async () => {
+  //   const response = {
+  //     user: {
+  //       id: 'user-123',
+  //       name: 'User not exist',
+  //       email: 'user@example.com',
+  //     },
+  //   };
+
+  //   apiMock.onPost('/session').reply(200, response);
+
+  //   await expect(response.user.email).rejects.toEqual(new AppError('Erro ao acessar, usuario ou senha incorreta'));
+
+  // });
+
+
+  it('should be hable to sign out', async () => {
+    jest.spyOn(Storage.prototype, 'getItem').mockImplementation(key => {
+      switch (key) {
+        case '@LocalMaps:token':
+          return 'token-123';
+        case '@LocalMaps:user':
+          return JSON.stringify({
+            id: 'user-123',
+            name: 'User test',
+            email: 'user@example.com',
+          });
+        default:
+          return null;
+      }
+    });
+
+    const removeItemSpy = jest.spyOn(Storage.prototype, 'removeItem');
+
+    const { result } = renderHook(() => useContext(AuthContext), {
+      wrapper: AuthProvider,
+    });
+
+
+
+    act(() => {
+      result.current.singOut();
+    });
+    expect(removeItemSpy).toHaveBeenCalledTimes(2);
+    expect(result.current.user).toBeUndefined();
   });
 
 });
