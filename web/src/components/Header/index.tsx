@@ -29,7 +29,7 @@ export const Header = () => {
   return (
     <Container>
       <Content onClick={handleLogoClick} title="Home">
-        <img data-testid="image" src={logo} alt="logo" />
+        <img data-testid="logo" src={logo} alt="logo" />
       </Content>
 
       <HeaderItems>

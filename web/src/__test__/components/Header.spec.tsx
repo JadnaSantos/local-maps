@@ -1,17 +1,26 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { screen, render, waitFor, fireEvent, renderHook } from '@testing-library/react';
 import { describe } from '@jest/globals';
 import { Header } from '../../components/Header';
+import { act } from 'react-dom/test-utils';
+
+
+const mockedNavigator = jest.fn();
 
 jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
-  useNavigate: () => (jest.fn())
+  ...(jest.requireActual('react-router-dom') as any),
+  useNavigate: () => ({
+    navigate: jest.fn().mockImplementation(() => ({}))
+  })
 }));
 
-describe('Header Component', () => {
-  it('should render component correctly', () => {
-    const { debug } = render(<Header />);
+describe('Header', () => {
+  it('should render Header correctly', async () => {
+    render(<Header />);
 
-    debug();
+    expect(screen.getByTestId('logo')).toBeInTheDocument();
+    expect(screen.getByText('Explorar')).toBeInTheDocument();
+    expect(screen.getByText('Cadastrar')).toBeInTheDocument();
   });
 });
+
