@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">36.36% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>8/22</span>
+                <span class='fraction'>22/22</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">36.36% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>8/22</span>
+                <span class='fraction'>22/22</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -90,44 +90,44 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { IStoreDTO } from '../../dtos/IStoreDTO';
 import { IStoreRepository } from '../../repositories/interfaces/IStoreRepository';
 &nbsp;
 export class CreateStoreUseCase {
-<span class="fstat-no" title="function not covered" >  constructor(</span>
-<span class="cstat-no" title="statement not covered" >    private storeRepository: IStoreRepository</span>
-<span class="cstat-no" title="statement not covered" >  ) { }</span>
+  constructor(
+    private storeRepository: IStoreRepository
+  ) { }
 &nbsp;
-  public async <span class="fstat-no" title="function not covered" >execute({ name, description, category, contact, latitude, longitude }: IStoreDTO) {</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    const store = await this.storeRepository.create({</span>
-<span class="cstat-no" title="statement not covered" >      name,</span>
-<span class="cstat-no" title="statement not covered" >      description,</span>
-<span class="cstat-no" title="statement not covered" >      category,</span>
-<span class="cstat-no" title="statement not covered" >      contact,</span>
-<span class="cstat-no" title="statement not covered" >      latitude,</span>
-<span class="cstat-no" title="statement not covered" >      longitude</span>
-<span class="cstat-no" title="statement not covered" >    });</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    return store;</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
+  public async execute({ name, description, category, contact, latitude, longitude }: IStoreDTO) {
+&nbsp;
+    const store = await this.storeRepository.create({
+      name,
+      description,
+      category,
+      contact,
+      latitude,
+      longitude
+    });
+&nbsp;
+    return store;
+  }
 }
 &nbsp;</pre></td></tr></table></pre>
 
@@ -136,7 +136,7 @@ export class CreateStoreUseCase {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2022-12-11T16:13:38.419Z
+                at 2023-01-02T16:09:15.580Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
