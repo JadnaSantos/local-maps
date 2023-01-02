@@ -4,7 +4,7 @@ import { app } from '../../../../shared/http/server';
 
 
 describe('Profille User Controller', () => {
-  it('should be able to list user profile', async () => {
+  it('should be able to list user\'s profile', async () => {
 
     const responseToken = await request(app).post('/session')
       .send({
@@ -23,14 +23,15 @@ describe('Profille User Controller', () => {
     expect(response.status).toBe(200);
   });
 
-  it('should not be able to list non-existing user\'s profile', async () => {
-    const responseToken = await request(app).post('/sessions').send({
-      email: 'usernonexistent@email.com',
-      password: 'usernonexistentpassword',
+  it('should not be able to list no existing user\'s profile', async () => {
+    const responseToken = await request(app).post('/session').send({
+      email: 'usernoexistent@email.com',
+      password: 'usernoexistentpassword',
     });
 
-    expect(responseToken.status).toBe(400);
+    expect(responseToken.status).toBe(401);
     expect(responseToken.body.token).toBe(undefined);
+    expect(responseToken.body.message).toEqual('Incorrect email or password');
 
     const { token } = responseToken.body;
 
@@ -40,7 +41,7 @@ describe('Profille User Controller', () => {
         Authorization: `Bearer ${token}`,
       });
 
-    console.log(response);
-    expect(response.body.message).toEqual('Token Invalid!');
+    expect(responseToken.status).toBe(401);
+    expect(response.body.message).toEqual('Token Invalid');
   });
 });

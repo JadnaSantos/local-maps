@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
-/* eslint-disable indent */
 import { StoreRepositoreInMemory } from '../../repositories/in-memory/StoreRepositoryInMemory';
 import { CreateStoreUseCase } from './CreateStoreUseCase';
 
