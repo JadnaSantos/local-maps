@@ -72,8 +72,7 @@ em modulos e funções deve ter uma responsabilidade.
 
 
 ### Features In Progress
-- [ ] Implemetar Integração Back-end; 🚧
-- [ ] Implemetar Teste no Front-end; 🚧
+- [ ] finalizar testes no Front-end; 🚧
 
 
 ### 📃 Funcionalidades
