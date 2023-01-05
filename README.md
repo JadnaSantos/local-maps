@@ -25,9 +25,6 @@ o projeto  é constituído por uma plataforma web que as pessoas possam cadastra
 </p
 
 
-
-
-
 ### 🚀 Tecnologias
 
 #### Back-End
@@ -69,11 +66,6 @@ Para execução do projeto eu procurei utilizar Single Responsibility Principle 
 em modulos e funções deve ter uma responsabilidade.
   
 </details>  
-
-
-### Features In Progress
-- [ ] finalizar testes no Front-end; 🚧
-
 
 ### 📃 Funcionalidades
 
