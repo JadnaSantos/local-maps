@@ -6,10 +6,8 @@ services:
     restart: always
     ports:
       - 5432:5432
-    environment:
-      - POSTGRES_USER=postgressql
-      - POSTGRES_PASSWORD=postgres12345
-      - POSTGRES_DB=postgres
+    env_file:
+      - .env
     volumes:
       - pgdata:/data/postgres
 volumes:
