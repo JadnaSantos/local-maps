@@ -2,7 +2,7 @@
 
 ### Sobre ✨
 
-Local Maps é um app que ajuda as pessoas a conhecer melhor o comércio local, ou seja,
+Local Maps é um app que ajuda as pessoas a conhecer melhor o comércio local,
 o projeto  é constituído por uma plataforma web que as pessoas possam cadastrar os estabelecimentos.
 
 ### Layout 🦚
